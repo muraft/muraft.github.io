@@ -1,287 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
-*
-{
-	padding: 0px;
-	margin: 0px;
-	font-family: 'Oswald', sans-serif;
-}
-body
-{
-	background-color: white;
-}
-
-#loading-screen
-{
-	width: 100%;
-	height: 100vh;
-	background-color: white;
-	z-index: 1;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-}
-#loading
-{
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-#loading-box
-{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-ms-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
-}
-#loading-circle
-{
-	width: 50px;
-	height: 50px;
-	background-color: white;
-	border-radius: 50%;
-	border: 3px dashed black;
-	animation: loading 2s infinite;
-}
-
-@keyframes loading
-{
-	from{transform:rotate(0deg);}
-	to{transform:rotate(360deg);}
-}
-
-#landing-bg
-{
-	background-color: white;
-	width: 100%;
-	height: 100vh;
-	position: relative;
-	background-image: url('../media/bg.jpg');
-	background-size: cover;
-}
-#landing-box
-{
-	width: 300px;
-	height: 500px;
-	background-color: white;
-	
-	margin: auto;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-ms-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
-	border-radius: 20px;
-	
-	-webkit-box-shadow: 0px 0px 11px 5px rgba(0,0,0,0.53);
-	-moz-box-shadow: 0px 0px 11px 5px rgba(0,0,0,0.53);
-	box-shadow: 0px 0px 11px 5px rgba(0,0,0,0.53);
-}
-#page-button
-{
-	float: left;
-	width: 29.5%;
-	height: 100%;
-	border-right: 1px solid black;
-}
-#page-button ul
-{
-	list-style: none;
-}
-#page-button ul li
-{
-	border-bottom: 1px solid black;
-	height: 122px;
-	padding-top: 50%;
-	font-size: 20px;
-	background-color: white;
-}
-#page-button ul li:first-child
-{
-	border-radius: 20px 0px 0px 0px;
-}
-#page-button ul li:hover,.active
-{
-	-webkit-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	-moz-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-}
-#page-button ul li:last-child
-{
-	border-bottom: none;
-	border-radius: 0px 0px 0px 20px;
-}
-
-#pages
-{
-	border-radius: 0px 20px 20px 0px;
-	float: right;
-	width: 70%;
-	height: 100%;
-	background-color: white;
-	position: relative;
-	-webkit-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	-moz-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-}
-.page
-{
-	margin: auto;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-ms-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
-	border-radius: 20px;
-	display: none;
-}
-
-#welcome
-{
-	background-color: white;
-	width: 90%;
-	height: 40%;
-	color: black;
-	overflow-y: hidden;
-	border-radius: 20px;
-	border: 1px solid black;
-	-webkit-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	-moz-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	animation: welcome 3s;
-}
-#header
-{
-	font-size: 30px;
-	font-weight: bold;
-	border-bottom: 1px solid black;
-}
-#intro
-{
-	font-size: 18px;
-}
-@keyframes welcome
-{
-	from{height:0%;border-radius:0px;}
-	to{height:40%;border-radius: 20px;}
-}
-
-#social
+#skill
 {
 	width: 90%;
 	height: 90%;
 	padding: 20px;
 }
 
-#social ul
+#skill ul
 {
 	list-style: none;
 }
-
-#social ul a
+#skill ul li
 {
-	text-decoration: none;
+	width: 100%;
+	margin: 5px;
 }
-
-#social ul li
+#skill ul li div
 {
-	padding: 4px;
-	transition: 1s;
-	margin-top: 5px;
+	text-align: center;
+	color: white;
 }
-
-#social ul li:hover
+#html div
 {
-	-webkit-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	-moz-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	border-radius: 5px;
+	background-color: orange;
+	width: 90%;
+	animation: html 2s;
 }
-
-#social ul li div
+@keyframes html
 {
-	font-size: 30px;
-	display: inline-block;
+	0% {width: 0%}
+	50% {width: 100%}
+	100% {width: 90%}
 }
-
-
-#social img
+#css div
 {
-	width: 20%;
-	aspect-ratio: 1;
+	background-color: blue;
+	width: 70%;
+	animation: css 2s;
 }
-
-#github img
+@keyframes css
 {
-	animation: spin 1s;
+	0% {width: 0%}
+	50% {width: 100%}
+	100% {width: 70%}
 }
-
-#github div
+#js div
 {
-	color: black;
-	animation: github 1s;
+	background-color: #f5d442;
+	width: 80%;
+	animation: js 2s;
 }
-@keyframes github
+@keyframes js
 {
-	from{
-		transform: translateX(-50%);
-		opacity: 0;
-	}
-	to{
-		transform: translateX(0px);
-		opacity: 1;
-	}
+	0% {width: 0%}
+	50% {width: 100%}
+	100% {width: 80%}
 }
-
-#youtube img
+#jquery div
 {
-	animation: spin 1s;
-	width: 25%;
-	aspect-ratio: 1;
+	background-color: #3481ad;
+	width: 30%;
+	animation: jquery 2s;
 }
-
-#youtube div
+@keyframes jquery
 {
-	color: red;
-	transform: translate(0px,-10px);
-	animation: youtube 1s;
+	0% {width: 0%}
+	50% {width: 100%}
+	100% {width: 30%}
 }
-
-@keyframes youtube
+#php div
 {
-	from{
-		transform: translate(-50%,-10px);
-		opacity: 0;
-	}
-	to{
-		transform: translate(0px,-10px);
-		opacity: 1;
-	}
+	background-color: purple;
+	width: 55%;
+	animation: php 2s;
 }
-
-#codewars
+@keyframes php
 {
-	background-image: url(https://www.codewars.com/users/COOLRAPTOR08/badges/micro);
-	height: 25px;
-	background-size: contain;
-	background-repeat: no-repeat;
-	animation: codewars 1s;
+	0% {width: 0%}
+	50% {width: 100%}
+	100% {width: 55%}
 }
-
-@keyframes codewars
+#mysql div
 {
-	from{
-		transform: translateY(-50%);
-		opacity: 0;
-	}
-	to{
-		transform: translateY(0px);
-		opacity: 1;
-	}
+	background-color: #a1bbff;
+	width: 70%;
+	animation: mysql 2s;
 }
-
-@keyframes spin
+@keyframes mysql
 {
-	from{transform: rotate(360deg)}
-	to(transform: rotate(0deg))
+	0% {width: 0%}
+	50% {width: 100%}
+	100% {width: 70%}
 }
