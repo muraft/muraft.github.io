@@ -15,7 +15,6 @@ function changePage(toPage)
 	{
 		case 'Welcome':
 		document.querySelector('#welcome').style.display='block';
-		runWelcome();
 		break;
 		case 'My Skill':
 		document.querySelector('#skill').style.display='block';
