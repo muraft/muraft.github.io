@@ -10,6 +10,7 @@ body
 	background-color: white;
 }
 
+/*##### Loading Screen #####*/
 #loading-screen
 {
 	width: 100%;
@@ -50,6 +51,7 @@ body
 	to{transform:rotate(360deg);}
 }
 
+/*##### Landing box #####*/
 #landing-bg
 {
 	background-color: white;
@@ -77,39 +79,45 @@ body
 	-moz-box-shadow: 0px 0px 11px 5px rgba(0,0,0,0.53);
 	box-shadow: 0px 0px 11px 5px rgba(0,0,0,0.53);
 }
-#page-button
+#page-buttons
 {
 	float: left;
 	width: 29.5%;
 	height: 100%;
 	border-right: 1px solid black;
 }
-#page-button ul
+#page-buttons ul
 {
 	list-style: none;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
-#page-button ul li
+#page-buttons ul li
 {
-	border-bottom: 1px solid black;
-	height: 122px;
+	height: 33.3333%;
 	padding-top: 50%;
 	font-size: 20px;
 	background-color: white;
-}
-#page-button ul li:first-child
-{
-	border-radius: 20px 0px 0px 0px;
-}
-#page-button ul li:hover,.active
-{
+	border: 1px solid black;
 	-webkit-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
 	-moz-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
 	box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
 }
-#page-button ul li:last-child
+#page-buttons ul li:first-child
 {
-	border-bottom: none;
+	border-radius: 20px 0px 0px 0px;
+}
+#page-buttons ul li:last-child
+{
 	border-radius: 0px 0px 0px 20px;
+}
+.active
+{
+	-webkit-box-shadow: inset 0px 0px 0px 0px !important;
+	-moz-box-shadow: inset 0px 0px 0px 0px !important;
+	box-shadow: inset 0px 0px 0px 0px !important;
+  border: 3px solid black !important;
 }
 
 #pages
@@ -131,24 +139,20 @@ body
 	top: 50%;
 	left: 50%;
 	-ms-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 	border-radius: 20px;
 	display: none;
 }
 
+/*##### Welcome page #####*/
 #welcome
 {
 	background-color: white;
 	width: 90%;
-	height: 40%;
+	height: auto;
 	color: black;
 	overflow-y: hidden;
-	border-radius: 20px;
-	border: 1px solid black;
-	-webkit-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	-moz-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.39);
-	animation: welcome 3s;
 }
 #header
 {
@@ -166,6 +170,33 @@ body
 	to{height:40%;border-radius: 20px;}
 }
 
+/*##### Skill page #####*/
+#skill
+{
+	width: 90%;
+	height: 90%;
+	padding: 20px;
+	overflow: auto;
+}
+#skill::-webkit-scrollbar {
+  display: none;
+}
+#skill ul
+{
+	list-style: none;
+}
+#skill ul li
+{
+	width: 100%;
+	margin: 5px;
+}
+#skill ul li div
+{
+	text-align: center;
+	color: white;
+}
+
+/*##### Social Page #####*/
 #social
 {
 	width: 90%;
@@ -176,6 +207,7 @@ body
 #social ul
 {
 	list-style: none;
+	width: 100%
 }
 
 #social ul a
@@ -188,6 +220,7 @@ body
 	padding: 4px;
 	transition: 1s;
 	margin-top: 5px;
+	width: 100%;
 }
 
 #social ul li:hover
@@ -261,8 +294,8 @@ body
 
 #codewars
 {
-	background-image: url(https://www.codewars.com/users/COOLRAPTOR08/badges/micro);
 	height: 25px;
+	background-image: url(https://www.codewars.com/users/COOLRAPTOR08/badges/micro);
 	background-size: contain;
 	background-repeat: no-repeat;
 	animation: codewars 1s;
@@ -283,5 +316,5 @@ body
 @keyframes spin
 {
 	from{transform: rotate(360deg)}
-	to(transform: rotate(0deg))
+	to{transform: rotate(0deg)}
 }
