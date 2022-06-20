@@ -17,7 +17,7 @@
  --bootstrap: 60%;--bootstrapString: '60%';--bootstrapColor:rgb(189,66,241);
  --jquery: 30%;--jqueryString: '30%';--jqueryColor:rgb(21,139,231);
  --php: 60%;--phpString: '60%';--phpColor:purple;
- --mysql: 80%;--mysqlString: '90%';--mysqlColor:rgb(158,185,240);
+ --mysql: 80%;--mysqlString: '80%';--mysqlColor:rgb(158,185,240);
  --nodejs: 15%;--nodejsString: '15%';--nodejsColor:rgb(29,181,48)
 }
 
@@ -251,15 +251,15 @@ window.onload=()=>
 	document.getElementById('loading-screen').style.display='none';
 	
 	const pageButton=document.querySelectorAll('#page-buttons ul li');
-pageButton.forEach((v)=>{
-	v.addEventListener("click",el=>{
-	  if(el.target.tagName=='LI'){
-		pageButton.forEach(w=>w.classList.remove('active'));
-		el.target.classList.add('active');
-		changePage(el.target.id);
-	  }
-	})
-})
+  pageButton.forEach((v)=>{
+	  v.addEventListener("click",el=>{
+	    el=el.target;
+	    while(el.tagName!='LI')el=el.parentNode;
+		  pageButton.forEach(w=>w.classList.remove('active'));
+	  	el.classList.add('active');
+  		changePage(el.id);
+	  })
+  })
 	
 	document.querySelector('#welcome').style.display='block';
 	type(introText,intro,100);
